@@ -1,3 +1,5 @@
+import AboutDarshan from "./AboutDarshan";
+
 const Navbar = ()=>(
     <>
     <header className="flex bg-yellow-300 text-black font-serif shadow-lg justify-between items-center">

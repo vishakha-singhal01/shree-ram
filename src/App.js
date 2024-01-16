@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Culture from "./components/Culture";
 import Gallery from "./components/Gallery";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import AboutDarshan from "./components/AboutDarshan";
 
 const App = () => (
     <>
@@ -16,4 +18,4 @@ const App = () => (
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<App/>);
+root.render(<RouterProvider router={AppRouter} />);
