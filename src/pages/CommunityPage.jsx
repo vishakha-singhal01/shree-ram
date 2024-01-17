@@ -1,7 +1,15 @@
+// src/App.js
 import React from "react";
+import Quiz from "../components/Quiz";
+import CommunityForm from "../components/CommunityForm";
 
-const CommunityPage = () => {
-  return <div>Community</div>;
+const App = () => {
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <CommunityForm />
+      <Quiz />
+    </div>
+  );
 };
 
-export default CommunityPage;
+export default App;
