@@ -1,7 +1,15 @@
-import React from "react";
+import AboutBanner from "../components/AboutBanner";
+import Places from "../components/Places";
+import Ramayana from "../components/Ramayana";
 
-const AboutPage = () => {
-  return <div>About</div>;
-};
+const AboutDarshan=()=> {
+  return (
+   <>
+   <AboutBanner/>
+    <Places/>
+    <Ramayana/>
+   </>
+  )
+}
 
-export default AboutPage;
+export default AboutDarshan;

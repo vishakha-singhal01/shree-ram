@@ -7,21 +7,21 @@ const Culture = ()=>(
             <img className="rounded-md" src="https://im.rediff.com/news/2020/aug/05modi-ram1.jpg"/>
             <h1 className="font-bold ">Festivals: Vibrant Expressions of Faith</h1>
             <p>1. Ram Navami: Celebrating Lord Rama's Birth Significance: Celebrates the birth of Lord Rama, the seventh avatar of Vishnu, in Ayodhya.</p>
-                <button className="bg-black text-white mt-2 p-1">Read More...</button>
+                <button className="bg-black text-white mt-2 p-1 rounded-md text-sm">Read More...</button>
         </div>
         <div className="w-72 h-auto shadow-lg bg-white m-3 p-3">
         <img className="rounded-md" src="https://im.rediff.com/news/2020/aug/05modi-ram1.jpg"/>
             <h1 className="font-bold ">Ramayana: Epic Journey, Timeless Wisdom</h1>
             <p>1. Ram Navami: Celebrating Lord Rama's Birth Significance: Celebrates the birth of Lord Rama, the seventh avatar of Vishnu, in Ayodhya.
                 </p>
-                <button className="bg-black text-white mt-2 p-1">Read More...</button>
+                <button className="bg-black text-white mt-2 p-1 rounded-md text-sm">Read More...</button>
         </div>
         <div className="w-72 h-auto shadow-lg bg-white m-3 p-3">
         <img className="rounded-md" src="https://im.rediff.com/news/2020/aug/05modi-ram1.jpg"/>
             <h1 className="font-bold ">Symbols: Unveiling Deeper Meaning</h1>
             <p>1. Ram Navami: Celebrating Lord Rama's Birth Significance: Celebrates the birth of Lord Rama, the seventh avatar of Vishnu, in Ayodhya.
                 </p>
-                <button className="bg-black text-white mt-2 p-1">Read More...</button>
+                <button className="bg-black text-white mt-2 p-1 rounded-md text-sm">Read More...</button>
         </div>
         </div>
     </section>
