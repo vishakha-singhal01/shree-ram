@@ -1,6 +1,6 @@
 const Infobanner = ()=>(
     <>
-    <section className="w-full h-full bg-cover bg-[url('https://storage.googleapis.com/prune/blog_image/Varansi-2.jpg')]">
+    <section className="w-full h-full bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZ9SP1Hr5IfLtE-Gfu0ekY-In3RqJJLWh_hjvoodL32pyGFp0Ev3eCeOAXnHVoJi-clU&usqp=CAU')]">
      <div className="min-h-screen text-center inset-0 backdrop-filter backdrop-blur-sm">
         
         <div className="py-52">
@@ -8,7 +8,7 @@ const Infobanner = ()=>(
         <p className="text-white text-2xl">Jagaran/Shringar Aarti 6:30 AM</p>
         <p className="text-white text-2xl">Afternoon Aarti 12:00 PM</p>
         <p className="text-white text-2xl">Sandhya Aarti	7:30 PM</p>
-        <button className="bg-black text-white p-4 m-2 rounded-md">Know more...</button>
+        <button className="bg-orange-500 text-white p-4 m-2 rounded-md text-sm">Know more...</button>
       </div>
      </div>
 

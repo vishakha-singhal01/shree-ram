@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => (
   <>
-    <header className="flex bg-yellow-300 text-black font-semibold shadow-lg justify-between items-center">
+    <header className="flex bg-yellow-400 text-black font-semibold shadow-lg justify-between items-center">
       <div className="w-20 h-22">
         <img
           src="https://coreldrawdesign.com/resources/previews/preview-shree-ram-png-image-free-design-jai-shree-ram-free-vector-image-download-1699429588.jpg"
