@@ -73,7 +73,7 @@ const Navbar = () => {
               )}
             </button>
             {isMenuOpen && (
-              <div className="absolute top-16 right-0 left-0 w-full h-full bg-white p-4 text-center">
+              <div className="absolute z-10 top-16 right-0 left-0 w-full h-full bg-white p-4 text-center">
                 {/* Mobile menu items */}
                 <Link
                   to="/"
