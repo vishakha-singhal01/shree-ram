@@ -73,32 +73,32 @@ const Navbar = () => {
               )}
             </button>
             {isMenuOpen && (
-              <div className="absolute top-16 right-0 left-0 bg-white p-4 text-center">
+              <div className="absolute top-16 right-0 left-0 w-full h-full bg-white p-4 text-center">
                 {/* Mobile menu items */}
                 <Link
                   to="/"
-                  className="block text-lg font-semibold text-gray-800 hover:bg-blue-100"
+                  className="block text-lg font-semibold p-4 text-gray-800 hover:bg-blue-100"
                   onClick={closeMenu}
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
-                  className="block text-lg font-semibold text-gray-800 hover:bg-blue-100"
+                  className="block text-lg font-semibold p-4 text-gray-800 hover:bg-blue-100"
                   onClick={closeMenu}
                 >
                   About Darshan
                 </Link>
                 <Link
                   to="/darshan"
-                  className="block text-lg font-semibold text-gray-800 hover:bg-gray-100"
+                  className="block text-lg font-semibold p-4 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
                   Darshan Info
                 </Link>
                 <Link
                   to="/community"
-                  className="block text-lg font-semibold text-gray-800 hover:bg-gray-100"
+                  className="block text-lg font-semibold p-4 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
                   Community
