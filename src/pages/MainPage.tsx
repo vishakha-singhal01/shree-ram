@@ -1,13 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
 import Culture from "../components/Culture";
 import Gallery from "../components/Gallery";
+import ImageSlider from "../components/ImageSlider";
 
 const MainPage = () => {
   return (
     <div>
-      <Hero />
+      <ImageSlider />
       <Culture />
       <Gallery />
     </div>
