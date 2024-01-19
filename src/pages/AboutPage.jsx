@@ -1,6 +1,7 @@
 import AboutBanner from "../components/AboutBanner";
 import Places from "../components/Places";
 import Ramayana from "../components/Ramayana";
+import Map from "../components/Map";
 
 const AboutDarshan=()=> {
   return (
@@ -8,6 +9,7 @@ const AboutDarshan=()=> {
    <AboutBanner/>
     <Places/>
     <Ramayana/>
+    <Map/>
    </>
   )
 }
