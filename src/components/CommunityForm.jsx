@@ -1,4 +1,21 @@
 import React, { useState } from "react";
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, push} from "firebase/database";
+
+// Initialize Firebase with your configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAHAlzrvx1ASmSZKi62NAnDPKAzFlQFx_Y",
+  authDomain: "ram-mandir-78452.firebaseapp.com",
+  projectId: "ram-mandir-78452",
+  storageBucket: "ram-mandir-78452.appspot.com",
+  messagingSenderId: "780146415430",
+  appId: "1:780146415430:web:c8d030d0a105212becf747"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const submissionsRef = ref(database, "submissions");
+
 
 const CommunityForm = () => {
   const [name, setName] = useState("");
@@ -7,16 +24,38 @@ const CommunityForm = () => {
   const [experience, setExperience] = useState("");
   const [rating, setRating] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleExperienceChange = (e) => {
+    const inputValue = e.target.value;
+
+    // Validate the input to allow only letters and spaces
+    if (/^[A-Za-z\s]+$/.test(inputValue) || inputValue === "") {
+      setExperience(inputValue);
+    }
+  };
+
+
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, such as sending the data to a server or displaying a thank-you message.
-    console.log("Form submitted:", {
-      name,
-      email,
-      visitDate,
-      experience,
-      rating,
-    });
+   
+
+      // Push the form data to the "submissions" node in the database
+      await push(submissionsRef, {
+        name,
+        email,
+        visitDate,
+        experience,
+        rating,
+      });
+
+    // Reset the form after submission
+    setName("");
+    setEmail("");
+    setVisitDate("");
+    setExperience("");
+    setRating("");
+
   };
 
   return (
@@ -39,6 +78,8 @@ const CommunityForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            pattern="^[A-Za-z\s]+$"
+            title="Name should contain only letters"
             required
           />
         </div>
@@ -77,22 +118,23 @@ const CommunityForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="experience"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Share Your Experience
-          </label>
-          <textarea
-            id="experience"
-            name="experience"
-            value={experience}
-            onChange={(e) => setExperience(e.target.value)}
-            rows="4"
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
-            required
-          ></textarea>
-        </div>
+  <label
+    htmlFor="experience"
+    className="block text-sm font-medium text-gray-600"
+  >
+    Share Your Experience
+  </label>
+  <textarea
+    id="experience"
+    name="experience"
+    value={experience}
+    onChange={handleExperienceChange}
+    rows="4"
+    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+    required
+  ></textarea>
+</div>
+
         <div className="mb-4">
           <label
             htmlFor="rating"
@@ -123,4 +165,4 @@ const CommunityForm = () => {
   );
 };
 
-export default CommunityForm;
+export default CommunityForm; 
