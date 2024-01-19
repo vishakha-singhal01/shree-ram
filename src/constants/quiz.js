@@ -54,10 +54,17 @@ export const quizData = [
   },
   {
     question: "When Rama broke the bow of Lord Shiva, which sage was angered?",
-    options: ["Vasishta", "Dhoorvasa", "Bhrugu", "Parashurama"],
-    answer: "Parashurama",
+    options: ["Vasishta", "Dhoorvasa", "Bhrugu", "Parshuram"],
+    answer: "Parshuram",
     explanation:
-      "When Rama broke the bow of Lord Shiva, it angered Parashurama. Parashurama, an avatar of Lord Vishnu, was known for his fierce temper.",
+      "When Rama broke the bow of Lord Shiva, it angered Parshuram. Parshuram, an avatar of Lord Vishnu, was known for his fierce temper.",
+  },
+  {
+    question: "Lord Rama belonged to which Yug",
+    options: ["Kaliyug", "Tretayug", "DwaparYug", "SatyaYug"],
+    answer: "Tretayug",
+    explanation:
+      "Lord Rama is a central figure in the Hindu epic Ramayana, and his stories are believed to have taken place during Tretayug",
   },
   {
     question: "Which bird was Jatayu?",

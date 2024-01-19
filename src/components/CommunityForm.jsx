@@ -21,14 +21,14 @@ const CommunityForm = () => {
 
   return (
     <div className="w-full p-8 bg-white">
-      <h2 className="text-2xl font-semibold mb-4">
-        Share Your Experience at Ram Mandir
+      <h2 className="mb-4 font-bold text-2xl sm:text-5xl m-2 p-2 text-orange-500 text-center">
+        Share Your Experience of Ram Mandir
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-base font-medium text-gray-600"
           >
             Name
           </label>
@@ -38,14 +38,14 @@ const CommunityForm = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-base font-medium text-gray-600"
           >
             Email
           </label>
@@ -55,14 +55,14 @@ const CommunityForm = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="visitDate"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-base font-medium text-gray-600"
           >
             Visit Date
           </label>
@@ -72,14 +72,14 @@ const CommunityForm = () => {
             name="visitDate"
             value={visitDate}
             onChange={(e) => setVisitDate(e.target.value)}
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
           />
         </div>
         <div className="mb-4">
           <label
             htmlFor="experience"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-base font-medium text-gray-600"
           >
             Share Your Experience
           </label>
@@ -89,14 +89,14 @@ const CommunityForm = () => {
             value={experience}
             onChange={(e) => setExperience(e.target.value)}
             rows="4"
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
           ></textarea>
         </div>
         <div className="mb-4">
           <label
             htmlFor="rating"
-            className="block text-sm font-medium text-gray-600"
+            className="block text-base font-medium text-gray-600"
           >
             Rating (Out of 5)
           </label>
@@ -108,13 +108,13 @@ const CommunityForm = () => {
             onChange={(e) => setRating(e.target.value)}
             min="1"
             max="5"
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
           />
         </div>
         <button
           type="submit"
-          className="p-2 bg-blue-500 text-white rounded-md cursor-pointer hover:bg-blue-600"
+          className="bg-orange-500 text-white p-4 rounded-md text-sm"
         >
           Submit
         </button>

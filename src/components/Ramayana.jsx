@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ramayana = () => (
     <>
-     <section>
+     <section className='container mx-auto'>
      <h1 className="font-bold  text-5xl m-2 p-2 text-orange-500 text-center">Epic Ramayana</h1>
         <div className="flex justify-around">
         <div className="w-72 h-auto shadow-lg bg-white m-3 p-3">

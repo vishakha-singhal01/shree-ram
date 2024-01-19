@@ -1,98 +1,148 @@
 // src/Quiz.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import { quizData } from "../constants/quiz";
+import { Link } from "react-router-dom";
 
-// Function to shuffle the array
-const shuffleArray = (array) => {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-};
+Modal.setAppElement("#root"); // Set the root element for accessibility
 
 const Quiz = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [shuffledQuizData, setShuffledQuizData] = useState(
-    shuffleArray(quizData)
+  const [selectedOptions, setSelectedOptions] = useState(
+    Array(quizData.length).fill(null)
   );
+  const [earnedReward, setEarnedReward] = useState(false);
 
-  useEffect(() => {
-    setIsAnswered(false);
-  }, [currentQuestion]); // Reset the answer status when moving to the next question
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const handleOptionSelect = (option) => {
-    if (!isAnswered) {
-      setSelectedOption(option);
-      setIsAnswered(true);
+  const handleOptionSelect = (questionIndex, optionIndex) => {
+    const newSelectedOptions = [...selectedOptions];
+    newSelectedOptions[questionIndex] = optionIndex;
+    setSelectedOptions(newSelectedOptions);
+  };
+
+  const calculateScore = () => {
+    let score = 0;
+    for (let i = 0; i < quizData.length; i++) {
+      const correctOptionIndex = quizData[i].options.findIndex(
+        (option) => option === quizData[i].answer
+      );
+      if (selectedOptions[i] === correctOptionIndex) {
+        score += 1;
+      }
+    }
+    return score;
+  };
+
+  const isEligibleForReward = calculateScore() > 7;
+
+  const handleRewardButtonClick = () => {
+    if (isEligibleForReward) {
+      setEarnedReward(true);
+      setModalIsOpen(true);
     }
   };
 
-  const handleNextQuestion = () => {
-    setSelectedOption(null);
-    setIsAnswered(false);
-    setCurrentQuestion(currentQuestion + 1);
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
-
-  const isCorrect = selectedOption === shuffledQuizData[currentQuestion].answer;
 
   return (
     <div className="w-full">
-      <div className="w-full mx-auto p-8 bg-white">
-        {currentQuestion < shuffledQuizData.length ? (
-          <div>
+      <h2 className="mb-4 font-bold text-2xl sm:text-5xl m-2 p-2 text-orange-500 text-center">
+        Check your Knowledge
+      </h2>
+      <div className="w-full mx-auto p-8 bg-slate-50">
+        {quizData.map((question, questionIndex) => (
+          <div key={questionIndex} className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">
-              {shuffledQuizData[currentQuestion].question}
+              {question.question}
             </h2>
             <ul>
-              {shuffledQuizData[currentQuestion].options.map(
-                (option, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleOptionSelect(option)}
-                    className={`p-2 cursor-pointer transition duration-300 ${
-                      option === selectedOption
-                        ? isCorrect
-                          ? "bg-green-500 text-white"
-                          : "bg-red-500 text-white"
-                        : "bg-white hover:bg-gray-200"
-                    }`}
-                  >
-                    {option}
-                  </li>
-                )
-              )}
+              {question.options.map((option, optionIndex) => (
+                <li
+                  key={optionIndex}
+                  className={`p-2 cursor-pointer transition duration-300 border border-orange-200 border-spacing-1 ${
+                    optionIndex === selectedOptions[questionIndex]
+                      ? question.answer === option
+                        ? "bg-green-500 text-white"
+                        : "bg-red-500 text-white"
+                      : "bg-white hover:bg-yellow-100"
+                  }`}
+                  onClick={() => handleOptionSelect(questionIndex, optionIndex)}
+                >
+                  {option}
+                </li>
+              ))}
             </ul>
-            {selectedOption && (
+            {selectedOptions[questionIndex] !== null && (
               <div className="mt-4">
-                {isCorrect ? (
-                  <p className="text-green-500 font-semibold">Correct!</p>
+                {question.answer ===
+                question.options[selectedOptions[questionIndex]] ? (
+                  <p className="text-green-500 font-semibold">
+                    Correct! {question.options[selectedOptions[questionIndex]]}{" "}
+                    is the right answer.
+                  </p>
                 ) : (
                   <div>
-                    <p className="text-red-500 font-semibold">Incorrect!</p>
+                    <p className="text-red-500 font-semibold">
+                      Incorrect! {question.options[selectedOptions[questionIndex]]}{" "}
+                      is not the correct answer.
+                    </p>
                     <p className="text-gray-700">
-                      {shuffledQuizData[currentQuestion].explanation}
+                      {question.explanation}
                     </p>
                   </div>
                 )}
-                <button
-                  onClick={handleNextQuestion}
-                  className="mt-4 p-2 bg-blue-500 text-white rounded-md cursor-pointer"
-                >
-                  Next
-                </button>
               </div>
             )}
           </div>
-        ) : (
-          <div>
-            <h2 className="text-2xl font-semibold mb-4">Quiz Completed!</h2>
-            {/* You can display the final score or other information here */}
-          </div>
-        )}
+        ))}
+        <div className="mt-4">
+          {selectedOptions.every((option) => option !== null) && (
+            <p className="text-xl font-semibold mb-2">
+              Your Score: {calculateScore()} out of {quizData.length}
+            </p>
+          )}
+          {isEligibleForReward && !earnedReward && (
+            <button
+              onClick={handleRewardButtonClick}
+              className="bg-orange-500 text-white p-4 rounded-md text-sm"
+            >
+              Reward
+            </button>
+          )}
+          <Modal
+          className="rounded-sm w-80 h-3/4 bg-white mx-auto p-2 shadow-lg"
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+            contentLabel="Reward Modal"
+          >
+            <div className="px-2">
+            <img
+                src="https://i.pinimg.com/originals/8b/f8/06/8bf806f5f991eb2745a0bffad5d18d82.jpg"
+                alt="Ram Bhakt"
+                className="rounded-md w-72 h-64"
+              />
+              <p className="mt-2 text-orange-500 text-sm font-semibold">Congratulations! You've earned a Badge!</p>
+              <p className="text-orange-500 text-sm mb-1 font-semibold">Take screenshot and share it on Social Media!</p>
+              <p className="text-orange-500 text-sm mb-1 font-semibold">Let's spread our culture with these #</p>
+              <button className="bg-black rounded-md p-2 shadow-sm text-white me-1 cursor-auto">jaishreeram</button>
+              <button className="bg-black rounded-md p-2 shadow-sm text-white me-1 cursor-auto">rambhakt</button>
+              <button className="bg-black rounded-md p-2 shadow-sm text-white cursor-auto">ramreward</button>
+              
+              {/* <div className="text-sm ">
+              <p>Play Quiz & Win Reward</p>
+              <p></p>
+              </div> */}
+              <Link to="https://ayodhya.netlify.app" target="" className="text-orange-400 hover:text-blue-500">https://ayodhya.netlify.app</Link>
+              <br/>
+
+              <button onClick={closeModal} className="relative bg-orange-500 mt-1 text-white w-16 h-8 p-2 text-center rounded-md text-sm">
+                Close
+              </button>
+            </div>
+          </Modal>
+        </div>
       </div>
     </div>
   );
