@@ -56,7 +56,7 @@ const ImageSlider = () => {
             src={image}
             alt={`Slide ${index + 1}`}
             className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out transform ${
-              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
             }`}
           />
         ))}
