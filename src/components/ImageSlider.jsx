@@ -6,8 +6,8 @@ const ImageSlider = () => {
     'https://im.rediff.com/news/2020/aug/05modi-ram1.jpg',
     'https://im.rediff.com/news/2020/aug/05modi-ram2.jpg',
     'https://im.rediff.com/news/2020/aug/05modi-ram3.jpg',
-    'https://c.ndtvimg.com/2020-08/l7l9chag_ram-temple-proposed-design-august-2020_625x300_04_August_20.jpg',
-    'https://mastimorning.com/wp-content/uploads/2023/12/ram-mandir-ayodhya-hd-images-2.jpg',
+    'https://swarajya.gumlet.io/swarajya/2020-08/bfc54327-1c31-4480-9e5b-fe589faff092/EekLzZ4UMAACUH5.jpg',
+    'https://e1.pxfuel.com/desktop-wallpaper/1002/384/desktop-wallpaper-ram-darbar.jpg',
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
