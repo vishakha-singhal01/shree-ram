@@ -77,13 +77,9 @@ const CommunityForm = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-<<<<<<< HEAD
             className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
-=======
-            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
             pattern="^[A-Za-z\s]+$"
             title="Name should contain only letters"
->>>>>>> a2866834f86d84e41cce9b0ed951865f93a45352
             required
           />
         </div>
@@ -122,24 +118,6 @@ const CommunityForm = () => {
           />
         </div>
         <div className="mb-4">
-<<<<<<< HEAD
-          <label
-            htmlFor="experience"
-            className="block text-base font-medium text-gray-600"
-          >
-            Share Your Experience
-          </label>
-          <textarea
-            id="experience"
-            name="experience"
-            value={experience}
-            onChange={(e) => setExperience(e.target.value)}
-            rows="4"
-            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
-            required
-          ></textarea>
-        </div>
-=======
   <label
     htmlFor="experience"
     className="block text-sm font-medium text-gray-600"
@@ -152,12 +130,11 @@ const CommunityForm = () => {
     value={experience}
     onChange={handleExperienceChange}
     rows="4"
-    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+    className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
     required
   ></textarea>
 </div>
 
->>>>>>> a2866834f86d84e41cce9b0ed951865f93a45352
         <div className="mb-4">
           <label
             htmlFor="rating"

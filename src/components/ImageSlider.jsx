@@ -3,11 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const ImageSlider = () => {
   const images = [
+    // 'https://e1.pxfuel.com/desktop-wallpaper/1002/384/desktop-wallpaper-ram-darbar.jpg',
     'https://im.rediff.com/news/2020/aug/05modi-ram1.jpg',
-    'https://im.rediff.com/news/2020/aug/05modi-ram2.jpg',
-    'https://im.rediff.com/news/2020/aug/05modi-ram3.jpg',
-    'https://swarajya.gumlet.io/swarajya/2020-08/bfc54327-1c31-4480-9e5b-fe589faff092/EekLzZ4UMAACUH5.jpg',
-    'https://e1.pxfuel.com/desktop-wallpaper/1002/384/desktop-wallpaper-ram-darbar.jpg',
+    // 'https://im.rediff.com/news/2020/aug/05modi-ram2.jpg',
+    // 'https://swarajya.gumlet.io/swarajya/2020-08/bfc54327-1c31-4480-9e5b-fe589faff092/EekLzZ4UMAACUH5.jpg',
+
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,19 +49,14 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <div className="overflow-hidden rounded-lg h-full">
+      <div className="overflow-hidden rounded-lg h-3/4">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-<<<<<<< HEAD
-            className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 transform ${
-              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-=======
             className={`absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out transform ${
               index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-100'
->>>>>>> a2866834f86d84e41cce9b0ed951865f93a45352
             }`}
           />
         ))}

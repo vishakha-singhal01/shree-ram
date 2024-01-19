@@ -8,9 +8,9 @@ const MainPage = () => {
   return (
     <div>
       <ImageSlider />
-      <VideoSection/>
       <Culture />
       <Gallery />
+      <VideoSection/>
     </div>
   );
 };
