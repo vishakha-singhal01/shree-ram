@@ -1,1 +1,1 @@
-#Ram Mandir - 22nd January consecration
+# Ram Mandir Consecration - 22nd January
