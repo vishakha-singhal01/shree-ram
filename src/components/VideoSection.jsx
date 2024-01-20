@@ -3,12 +3,27 @@
 const VideoSection = () => {
   return (
     <>
-    <section className=''>
-    <h1 className="font-bold  sm:text-5xl text-2xl m-2 p-2 text-orange-500 text-center">History of Ram Mandir</h1>
-        <div className='w-2/4 h-96 m-auto p-auto'>
+    <h1 className="font-bold text-3xl md:text-5xl m-4 p-6 text-orange-500 text-center">
+          History of Ram Mandir
+        </h1>
+    <div className="container mx-auto p-4 flex flex-col lg:flex-row mb-12">
+      
+      {/* Image */}
+      <div className="lg:w-1/2">
+        
+      <div className='m-auto p-auto'>
         <iframe width="100%" height="400" src="https://www.youtube.com/embed/0WG2Y-pYPI8?si=vclb0BkbGLHXi309" title="YouTube video player" frameborder="40% " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-    </section>
+      </div>
+
+      {/* Text content */}
+      <div className="lg:w-1/2 lg:pl-4">
+        
+        <p className="text-justify text-base md:text-lg px-3 mt-1">
+        The Ram Mandir in Ayodhya, India, is a cultural milestone and architectural marvel, honoring Lord Rama at his birthplace. Stemming from a historic dispute resolved by the Supreme Court in 2019, the temple symbolizes unity, with devotees contributing to its construction. The project, a national endeavor, sparked development in Ayodhya and gained global attention. The ceremonial groundbreaking in 2020, attended by dignitaries and millions, marked a significant milestone. The temple, emphasizing religious harmony, adheres to traditional practices and Vedic rituals. Expected to boost spiritual tourism, it signifies a symbolic victory, adding to India's cultural heritage. The formal inauguration solidifies its place as a historic and sacred landmark. The Ram Mandir stands not just as a temple but as a testament to India's ability to resolve cultural and religious disputes.
+        </p>
+      </div>
+    </div>
     </>
   )
 }

@@ -87,14 +87,14 @@ const Navbar = () => {
                   className="block text-lg font-semibold p-8 text-gray-800 hover:bg-blue-100"
                   onClick={closeMenu}
                 >
-                  About Darshan
+                  About
                 </Link>
                 <Link
                   to="/darshan"
                   className="block text-lg font-semibold p-8 text-gray-800 hover:bg-gray-100"
                   onClick={closeMenu}
                 >
-                  Darshan Info
+                  Information
                 </Link>
                 <Link
                   to="/community"
@@ -113,10 +113,10 @@ const Navbar = () => {
               Home
             </Link>
             <Link to="/about" className="p-3">
-              About Darshan
+              About
             </Link>
             <Link to="/darshan" className="p-3">
-              Darshan Info
+              Information
             </Link>
             <Link to="/community" className="p-3">
               Community

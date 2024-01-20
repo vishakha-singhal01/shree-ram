@@ -2,8 +2,8 @@ import React from 'react'
 
 const Places = () => (
   <>
-  <section className='border border-b'>
-        <h1 className="font-bold  text-5xl m-2 p-2 text-orange-500 text-center">Places to Visit</h1>
+  <section className='mb-12'>
+        <h1 className="font-bold  text-5xl m-4 p-6 text-orange-500 text-center">Places to Visit</h1>
         <div className="flex justify-around flex-wrap">
         <div className="w-72 h-48 shadow-lg bg-white m-3 p-3 hover:scale-110 transition duration-500">
             <img className="rounded h-36 w-72" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0aajbECEsUHBv6-OySS-FWSq971BGlqvOxw&usqp=CAU"/>

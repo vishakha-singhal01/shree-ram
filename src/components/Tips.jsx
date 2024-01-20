@@ -1,6 +1,6 @@
 const Tips = () => (
   <>
-    <div className="border border-b">
+    <div>
     <h1 className="font-bold  text-5xl m-2 p-2 text-orange-500 text-center">Good to Know</h1>
     <div className="flex flex-wrap justify-around m-5 p-3">
     <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Free Entry of Everyone</div>
