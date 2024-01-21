@@ -1,5 +1,5 @@
 import React from "react";
-
+import PlacesImg from "../../public/images/places.jpeg";
 const templesData = [
   {
     imageSrc:
@@ -44,17 +44,29 @@ const templesData = [
 
 const Places = () => (
   <>
-    <section className="mb-12">
+    <section className="py-20 relative">
+      <img
+        src={PlacesImg}
+        className="absolute top-0 left-0 h-full w-full opacity-40 z-[-1]"
+      />
       <h1 className="font-bold  text-5xl m-4 p-6 text-orange-500 text-center">
         Places to Visit
       </h1>
-      <div className="flex justify-around flex-wrap">
+      <div className="grid grid-cols-4 gap-x-6 gap-y-16 md:px-16">
         {templesData.map((temple) => {
           const { imageSrc, title } = temple;
           return (
-            <div className="w-72 h-48 shadow-lg bg-white m-3 p-3 hover:scale-110 transition duration-500">
-              <img className="rounded h-36 w-72" src={imageSrc} />
-              <h1 className="font-bold text-center">{title}</h1>
+            <div className="relative group">
+              <div className="border-2 border-orange-500 border-opacity-20 shadow-xl bg-white group-hover:scale-110 transition duration-500">
+                <img className="h-48 w-full object-cover" src={imageSrc} />
+                <h1 className="font-bold text-2xl text-center py-4">{title}</h1>
+              </div>
+              <div className=" group-hover:opacity-100 group-hover:z-[2] transition-all duration-[500ms] group-hover:scale-110 opacity-0 absolute top-0 left-0 h-full w-full bg-orange-500 bg-opacity-95 border-2 border-black z-[-1] p-6 font-semibold text-lg text-white">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Eligendi atque rem similique adipisci nihil eveniet voluptatum
+                autem exercitationem perferendis. Culpa, molestiae tenetur? Unde
+                eligendi veniam doloribus iste enim explicabo debitis.
+              </div>
             </div>
           );
         })}

@@ -1,4 +1,4 @@
-import OmImage from "../../public/images/om.png";
+import OmImage from "../../public/images/OmSymbol.svg";
 
 const GalleryDataCollection = [
   {
@@ -45,11 +45,10 @@ const GalleryDataCollection = [
 
 const Gallery = () => (
   <>
-    <section className="bg-orange-500 py-20 px-16 relative">
+    <section className="bg-orange-500 py-20 md:px-16 relative">
       <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center">
-        <img src={OmImage} className="h-[90%] z-[-1] opacity-90" />
+        <img src={OmImage} className="h-[90%] z-[1] opacity-30" />
       </div>
-      <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center bg-white opacity-[0.50]"></div>
       <h1 className="font-bold text-5xl mb-10 text-white text-center z-[5]">
         Captured Moments
       </h1>
