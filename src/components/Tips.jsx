@@ -1,16 +1,28 @@
+const tipsData = [
+  "Free Entry of Everyone",
+  "Cameras not allowed",
+  "Timings - 7:00 AM to 7:00 PM",
+  "Prefer Simple Dress",
+  "Require Time - 1-2 hours",
+];
+
 const Tips = () => (
   <>
-    <div>
-    <h1 className="font-bold  text-5xl m-2 p-2 text-orange-500 text-center">Good to Know</h1>
-    <div className="flex flex-wrap justify-around m-5 p-3">
-    <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Free Entry of Everyone</div>
-    <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Cameras not allowed</div>
-    <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Timings -	7:00 AM to 7:00 PM</div>
-    <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Prefer Simple Dress</div>
-    <div className="w-32 h-32 bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">Require Time - 1-2 hours</div>
-    </div>
+    <div className="py-20">
+      <h1 className="font-bold  text-5xl mb-10 text-orange-500 text-center">
+        Good to Know
+      </h1>
+      <div className="grid grid-flow-col gap-6 md:px-16">
+        {tipsData.map((tip) => {
+          return (
+            <div className=" text-xl bg-white shadow-lg rounded-md font-bold border border-slate-950 text-center my-6 py-9 hover:scale-110 transition duration-50 cursor-pointer">
+              {tip}
+            </div>
+          );
+        })}
+      </div>
     </div>
   </>
-)
+);
 
-export default Tips
+export default Tips;

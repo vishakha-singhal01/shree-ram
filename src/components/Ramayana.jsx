@@ -39,25 +39,31 @@ const Ramayana = () => (
       <h1 className="font-bold text-5xl mb-6 text-orange-500 text-center">
         Ramayana Rewind
       </h1>
-      <div className="flex flex-wrap justify-around">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:px-16">
         {ramayanaData.map((ramayana) => {
           return (
-            <div className="w-72 sm:w-1/3 md:w-1/4 lg:w-1/4 xl:w-1/4 h-auto shadow-lg bg-white m-3 p-3">
+            <div className="shadow-lg bg-white p-4 flex flex-col h-full">
               <img
-                className="rounded-md w-full h-40"
+                className="flex-1 rounded-md w-full h-48 object-cover"
                 src={ramayana.imageUrl}
                 alt={ramayana.title}
               />
-              <h1 className="font-bold">{ramayana.title}</h1>
-              <p>{ramayana.content}</p>
-              <a
-                href={ramayana.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-500"
-              >
-                Watch Now
-              </a>
+              <div className="flex-[2] flex flex-col justify-between">
+                <div>
+                  <h1 className="font-bold text-2xl my-4">{ramayana.title}</h1>
+                  <p className="texxt-xl font-semibold mb-6">
+                    {ramayana.content}
+                  </p>
+                </div>
+                <a
+                  href={ramayana.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-500 font-bold text-xl border-2 border-orange-500 p-2 w-fit"
+                >
+                  Watch Now
+                </a>
+              </div>
             </div>
           );
         })}
