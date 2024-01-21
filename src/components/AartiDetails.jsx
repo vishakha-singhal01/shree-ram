@@ -2,7 +2,7 @@ import React from "react";
 
 const AartiComponent = () => {
   return (
-    <div className="container mx-auto p-4 flex flex-col lg:flex-row border border-b">
+    <div className="container mx-auto py-20 flex flex-col gap-6 lg:flex-row border-b">
       {/* Image */}
       <div className="lg:w-1/2">
         <img
@@ -17,7 +17,7 @@ const AartiComponent = () => {
         <h1 className="font-bold text-3xl md:text-5xl m-2 p-2 text-orange-500 text-center">
           About Aarti Pass
         </h1>
-        <p className="text-justify text-base md:text-lg">
+        <p className="text-justify text-lg md:text-xl font-semibold">
           To attend the morning Aarti or Shringar Aarti at the Ayodhya Ram
           Temple, it is necessary to book your ticket one day in advance,
           subject to availability. To participate in the Sandhya Aarti, it is

@@ -18,7 +18,10 @@ const aartiSchedule = [
 const Infobanner = () => (
   <>
     <section className="w-full h-[90vh] flex justify-center items-center">
-      <img src={Aarti} className="absolute z-[-1] w-full h-full object-cover" />
+      <img
+        src={Aarti}
+        className="absolute z-[-1] w-full h-[90vh] object-cover"
+      />
       <div className="text-center bg-black bg-opacity-60">
         <div className="p-16">
           <h3 className="font-semibold text-3xl my-2 text-white ">
