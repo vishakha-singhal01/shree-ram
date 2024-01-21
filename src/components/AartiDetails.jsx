@@ -13,7 +13,7 @@ const AartiComponent = () => {
       </div>
 
       {/* Text content */}
-      <div className="lg:w-1/2 lg:pl-4">
+      <div className="lg:w-1/2 lg:pl-4 px-8 md:px-0">
         <h1 className="font-bold text-3xl md:text-5xl m-2 p-2 text-orange-500 text-center">
           About Aarti Pass
         </h1>
