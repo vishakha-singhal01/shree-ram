@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, push} from "firebase/database";
+import { getDatabase, ref, push } from "firebase/database";
 
 // Initialize Firebase with your configuration
 const firebaseConfig = {
@@ -16,13 +16,13 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const submissionsRef = ref(database, "submissions");
 
-
 const CommunityForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [visitDate, setVisitDate] = useState("");
   const [experience, setExperience] = useState("");
   const [rating, setRating] = useState("");
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   const handleExperienceChange = (e) => {
     const inputValue = e.target.value;
@@ -33,13 +33,10 @@ const CommunityForm = () => {
     }
   };
 
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
 
+    try {
       // Push the form data to the "submissions" node in the database
       await push(submissionsRef, {
         name,
@@ -49,13 +46,26 @@ const CommunityForm = () => {
         rating,
       });
 
-    // Reset the form after submission
-    setName("");
-    setEmail("");
-    setVisitDate("");
-    setExperience("");
-    setRating("");
+      // Reset the form after submission
+      setName("");
+      setEmail("");
+      setVisitDate("");
+      setExperience("");
+      setRating("");
 
+      // Set submission status to success
+      setSubmissionStatus("success");
+
+      // Hide the success message after 5 seconds
+      setTimeout(() => {
+        setSubmissionStatus(null);
+      }, 5000);
+    } catch (error) {
+      // Handle submission error
+      console.error("Error submitting form:", error);
+      // Set submission status to error
+      setSubmissionStatus("error");
+    }
   };
 
   return (
@@ -65,10 +75,7 @@ const CommunityForm = () => {
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label
-            htmlFor="name"
-            className="block text-base font-medium text-gray-600"
-          >
+          <label htmlFor="name" className="block text-base font-medium text-gray-600">
             Name
           </label>
           <input
@@ -77,17 +84,14 @@ const CommunityForm = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
+            className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
             pattern="^[A-Za-z\s]+$"
             title="Name should contain only letters"
             required
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="email"
-            className="block text-base font-medium text-gray-600"
-          >
+          <label htmlFor="email" className="block text-base font-medium text-gray-600">
             Email
           </label>
           <input
@@ -101,10 +105,7 @@ const CommunityForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="visitDate"
-            className="block text-base font-medium text-gray-600"
-          >
+          <label htmlFor="visitDate" className="block text-base font-medium text-gray-600">
             Visit Date
           </label>
           <input
@@ -115,32 +116,24 @@ const CommunityForm = () => {
             onChange={(e) => setVisitDate(e.target.value)}
             className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
-            
           />
         </div>
         <div className="mb-4">
-  <label
-    htmlFor="experience"
-    className="block text-sm font-medium text-gray-600"
-  >
-    Share Your Experience
-  </label>
-  <textarea
-    id="experience"
-    name="experience"
-    value={experience}
-    onChange={handleExperienceChange}
-    rows="4"
-    className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
-    required
-  ></textarea>
-</div>
-
+          <label htmlFor="experience" className="block text-sm font-medium text-gray-600">
+            Share Your Experience
+          </label>
+          <textarea
+            id="experience"
+            name="experience"
+            value={experience}
+            onChange={handleExperienceChange}
+            rows="4"
+            className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+            required
+          ></textarea>
+        </div>
         <div className="mb-4">
-          <label
-            htmlFor="rating"
-            className="block text-base font-medium text-gray-600"
-          >
+          <label htmlFor="rating" className="block text-base font-medium text-gray-600">
             Rating (Out of 5)
           </label>
           <input
@@ -157,13 +150,26 @@ const CommunityForm = () => {
         </div>
         <button
           type="submit"
-          className="bg-orange-500 text-white p-3 rounded-md text-base"
+          className="bg-orange-500 text-white p-4 rounded-md text-sm"
         >
           Submit
         </button>
       </form>
+
+      {/* Display success message if submission is successful */}
+      {submissionStatus === "success" && (
+        <div className="bg-green-500 text-white p-4 rounded-md text-sm mt-4">
+          Form submitted successfully! Closing in 5 seconds...
+        </div>
+      )}
+      {/* Display error message if submission encounters an error */}
+      {submissionStatus === "error" && (
+        <p className="text-red-600 mt-4">
+          Oops! There was an error submitting the form. Please try again later.
+        </p>
+      )}
     </div>
   );
 };
 
-export default CommunityForm; 
+export default CommunityForm;
