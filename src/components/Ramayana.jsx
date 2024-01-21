@@ -30,7 +30,7 @@ const ramayanaData = [
 
 const Ramayana = () => (
   <>
-    <section className="py-20 relative">
+    <section className="py-20 px-16 relative">
       <img
         src={RamanyaBackground}
         className="w-full h-full absolute top-0 left-0 object-cover z-[-2]"

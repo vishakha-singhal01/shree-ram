@@ -2,7 +2,7 @@ import React from "react";
 
 const AartiComponent = () => {
   return (
-    <div className="container mx-auto py-20 flex flex-col lg:flex-row gap-6 border-b">
+    <div className="container mx-auto p-4 flex flex-col lg:flex-row border border-b">
       {/* Image */}
       <div className="lg:w-1/2">
         <img

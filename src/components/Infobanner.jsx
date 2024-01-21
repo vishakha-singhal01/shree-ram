@@ -1,17 +1,33 @@
-const Infobanner = ()=>(
-    <>
-    <section className="w-full h-full bg-cover bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZ9SP1Hr5IfLtE-Gfu0ekY-In3RqJJLWh_hjvoodL32pyGFp0Ev3eCeOAXnHVoJi-clU&usqp=CAU')]">
-     <div className="min-h-screen text-center inset-0 backdrop-filter backdrop-blur-sm">
-        
-        <div className="py-52">
-        <h1 className="font-bold text-4xl my-2 text-white ">Aarti Timings at Ayodhya Temple</h1>
-        <p className="text-white text-2xl">Jagaran/Shringar Aarti 6:30 AM</p>
-        <p className="text-white text-2xl">Afternoon Aarti 12:00 PM</p>
-        <p className="text-white text-2xl">Sandhya Aarti	7:30 PM</p>
+import Aarti from "../../public/images/Aarti.jpg";
+const Infobanner = () => (
+  <>
+    <section className="w-full h-[90vh] flex justify-center items-center">
+      <img src={Aarti} className="absolute z-[-1] w-full object-cover" />
+      <div className="text-center bg-black bg-opacity-60">
+        <div className="p-16">
+          <h3 className="font-semibold text-3xl my-2 text-white ">
+            Ayodhya Temple
+          </h3>
+          <h1 className="font-bold text-9xl my-4 text-white tracking-wide">
+            Aarti Timings
+          </h1>
+          <div className="w-3/4 text-white mx-auto flex flex-col gap-4 mt-6">
+            <div className="w-full flex justify-between ">
+              <p className="font-semibold text-3xl">Jagaran/Shringar Aarti</p>
+              <p className="font-bold text-3xl">6:30 AM</p>
+            </div>
+            <div className="w-full flex justify-between">
+              <p className="font-semibold text-3xl">Afternoon Aarti</p>
+              <p className="font-bold text-3xl">12:00 PM</p>
+            </div>
+            <div className="w-full flex justify-between">
+              <p className="font-semibold text-3xl">Sandhya Aarti</p>
+              <p className="font-bold text-3xl">7:30 PM</p>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-
-   </section>
-    </>
-)
+    </section>
+  </>
+);
 export default Infobanner;

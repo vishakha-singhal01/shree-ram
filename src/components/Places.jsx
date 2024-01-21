@@ -52,7 +52,7 @@ const Places = () => (
       <h1 className="font-bold  text-5xl m-4 p-6 text-orange-500 text-center">
         Places to Visit
       </h1>
-      <div className="grid grid-cols-4 gap-x-6 gap-y-16 md:px-16">
+      <div className="grid md:grid-cols-4 grid-cols-1 gap-x-6 gap-y-16 px-16">
         {templesData.map((temple) => {
           const { imageSrc, title } = temple;
           return (
