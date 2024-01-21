@@ -8,8 +8,7 @@ const Footer = () => {
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
             <div className="mx-auto max-w-sm lg:max-w-none">
               <p className="mt-4 text-center lg:text-left lg:text-lg">
-                This web app is created for the information purpose and to
-                create community of all Ram Bhakt.
+              This web app is created for informational purposes and aims to foster a community of all Ram Bhakts, promoting unity and shared devotion.
               </p>
 
               <div className="mt-6 flex justify-center gap-4 lg:justify-start">
@@ -107,6 +106,16 @@ const Footer = () => {
                 </strong>
 
                 <ul className="mt-6 space-y-1">
+                <li>
+                    <Link
+                      className=" transition "
+                      to="/"
+                    >
+                      {" "}
+                      Home{" "}
+                    </Link>
+                  </li>
+
                   <li>
                     <Link
                       className=" transition "
@@ -140,47 +149,40 @@ const Footer = () => {
               <div>
                 <strong className="font-semibold text-lg">
                   {" "}
-                  About{" "}
+                  Official{" "}
                 </strong>
 
                 <ul className="mt-6 space-y-1">
                   <li>
                     <Link
                       className=" transition "
-                      to="/"
+                      to="https://srjbtkshetra.org/"
+                      target="_blank"
                     >
                       {" "}
-                      About{" "}
+                      Donate{" "}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className=" transition "
-                      to="/"
+                      to="https://srjbtkshetra.org/accommodation/"
+                      target="_blank"
                     >
                       {" "}
-                      Careers{" "}
+                      Accomodation{" "}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className=" transition "
-                      to="/"
+                      to="https://srjbtkshetra.org/how-to-reach/"
+                      target="_blank"
                     >
                       {" "}
-                      History{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className=" transition "
-                      to="/"
-                    >
-                      {" "}
-                      Our Team{" "}
+                      How to Reach{" "}
                     </Link>
                   </li>
                 </ul>
@@ -196,30 +198,22 @@ const Footer = () => {
                   <li>
                     <Link
                       className=" transition "
-                      to="/"
+                      to="https://github.com/vishakha-singhal01/shree-ram"
+                      target="_blank"
                     >
                       {" "}
-                      FAQs{" "}
+                      Contribute{" "}
                     </Link>
                   </li>
 
                   <li>
                     <Link
                       className=" transition "
-                      to="/"
+                      to="https://www.linkedin.com/in/swadesh-kumar/"
+                      target="_blank"
                     >
                       {" "}
                       Contact{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className=" transition "
-                      to="/"
-                    >
-                      {" "}
-                      Live Chat{" "}
                     </Link>
                   </li>
                 </ul>
@@ -231,13 +225,36 @@ const Footer = () => {
             <p className="text-center text-xs/relaxed">
               Developed with ❤ by
               <br />
-              Created with &nbsp;
-              <Link
-                to=""
-                className=" underline transition"
+              <ul className="flex justify-center">
+                <li>
+                <Link
+                to="https://www.linkedin.com/in/vishakha-singhal-18983b1bb/"
+                className="m-1 underline transition"
+                target="_blank"
               >
-                Vishakha, Swadesh & Chaitanya
+                Vishakha
               </Link>
+                </li>
+                <li>
+                <Link
+                to="https://www.linkedin.com/in/swadesh-kumar/"
+                className="m-1 underline transition"
+                target="_blank"
+              >
+                Swadesh
+              </Link>
+                </li>
+                <li>
+                <Link
+                to="https://www.linkedin.com/in/chaitanyaag/"
+                className="m-1 underline transition"
+                target="_blank"
+              >
+                Chaitanya
+              </Link>
+                </li>
+              
+              </ul>
             </p>
           </div>
         </div>
