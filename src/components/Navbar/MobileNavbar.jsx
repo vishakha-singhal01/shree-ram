@@ -40,14 +40,14 @@ const MobileNavbar = ({ links, isMenuOpen, closeMenu, toggleMenu }) => {
         )}
       </button>
       {isMenuOpen && (
-        <div className="absolute z-10 top-16 right-0 left-0 w-full h-full bg-white p-4 text-center">
+        <div className="absolute z-10 top-16 right-0 left-0 w-full h-full p-4 text-center">
           {/* Mobile menu items */}
           {links.map((link) => {
             const { name, url } = link;
             return (
               <Link
                 to={url}
-                className="block text-lg font-semibold p-8 text-gray-800 hover:bg-blue-100"
+                className="block text-lg font-semibold p-8 bg-white text-gray-800 hover:bg-blue-100"
                 onClick={closeMenu}
               >
                 {name}
