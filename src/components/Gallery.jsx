@@ -1,3 +1,5 @@
+import OmImage from "../../public/images/om.png";
+
 const GalleryDataCollection = [
   {
     imageUrl:
@@ -43,15 +45,19 @@ const GalleryDataCollection = [
 
 const Gallery = () => (
   <>
-    <section className="bg-orange-500 py-20">
-      <h1 className="font-bold text-5xl mb-10 text-white text-center">
+    <section className="bg-orange-500 py-20 px-16 relative">
+      <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+        <img src={OmImage} className="h-[90%] z-[-1] opacity-90" />
+      </div>
+      <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center bg-white opacity-[0.50]"></div>
+      <h1 className="font-bold text-5xl mb-10 text-white text-center z-[5]">
         Captured Moments
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-x-6 gap-y-16">
         {GalleryDataCollection.map((gallery) => {
           const { imageUrl, title } = gallery;
           return (
-            <div className="w-80 h-64 shadow-lg bg-white m-3 p-3 hover:scale-125 transition duration-500 mx-auto">
+            <div className="z-[3] w-80 h-64 shadow-lg bg-white m-3 p-3 hover:scale-125 transition duration-500 mx-auto">
               <img
                 className="rounded h-48 w-80 object-cover object-center"
                 src={imageUrl}
