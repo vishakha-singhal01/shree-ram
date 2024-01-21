@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const AartiComponent = () => {
   return (
-    <div className="container mx-auto p-4 flex flex-col lg:flex-row border border-b">
+    <div className="container mx-auto py-20 flex flex-col lg:flex-row gap-6 border-b">
       {/* Image */}
       <div className="lg:w-1/2">
         <img
@@ -22,10 +22,9 @@ const AartiComponent = () => {
           Temple, it is necessary to book your ticket one day in advance,
           subject to availability. To participate in the Sandhya Aarti, it is
           essential to book your ticket on the same day, with booking
-          availability depending on the subject of availability. For Ram
-          Mandir Aarti passes, please reach the Camp Office at Shri Ram
-          Janmabhoomi 30 minutes before the Aarti Time with a valid Government
-          ID Proof.
+          availability depending on the subject of availability. For Ram Mandir
+          Aarti passes, please reach the Camp Office at Shri Ram Janmabhoomi 30
+          minutes before the Aarti Time with a valid Government ID Proof.
         </p>
       </div>
     </div>
