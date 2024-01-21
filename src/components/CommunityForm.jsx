@@ -115,6 +115,7 @@ const CommunityForm = () => {
             onChange={(e) => setVisitDate(e.target.value)}
             className="mt-1 p-2 w-full border border-orange-300 rounded-md focus:outline-orange-300 focus:ring-orange-400 focus:border-orange-500"
             required
+            
           />
         </div>
         <div className="mb-4">
