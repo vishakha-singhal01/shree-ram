@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-yellow-300">
+      <footer className="bg-orange-500 text-white">
         <div className="mx-auto max-w-screen-xl px-1 pb-2 pt-8 sm:px-6 lg:px-8">
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
             <div className="mx-auto max-w-sm lg:max-w-none">
-              <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+              <p className="mt-4 text-center lg:text-left lg:text-lg">
                 This web app is created for the information purpose and to
                 create community of all Ram Bhakt.
               </p>
 
               <div className="mt-6 flex justify-center gap-4 lg:justify-start">
                 <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" transition "
                   to=""
                   target="_blank"
                   rel="noreferrer"
@@ -36,7 +36,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" transition "
                   to=""
                   target="_blank"
                   rel="noreferrer"
@@ -58,7 +58,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" transition "
                   to=""
                   target="_blank"
                   rel="noreferrer"
@@ -76,7 +76,7 @@ const Footer = () => {
                 </a>
 
                 <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" transition "
                   to=""
                   target="_blank"
                   rel="noreferrer"
@@ -101,7 +101,7 @@ const Footer = () => {
 
             <div className="grid grid-cols-3  gap-4 md:gap-8 text-center  lg:text-left">
               <div>
-                <strong className="font-semibold text-lg text-gray-900">
+                <strong className="font-semibold text-lg">
                   {" "}
                   Quick Links{" "}
                 </strong>
@@ -109,7 +109,7 @@ const Footer = () => {
                 <ul className="mt-6 space-y-1">
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/about"
                     >
                       {" "}
@@ -119,7 +119,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/darshan"
                     >
                       Darshan Info
@@ -128,7 +128,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/community"
                     >
                       Community
@@ -138,7 +138,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <strong className="font-semibold text-lg text-gray-900 ">
+                <strong className="font-semibold text-lg">
                   {" "}
                   About{" "}
                 </strong>
@@ -146,7 +146,7 @@ const Footer = () => {
                 <ul className="mt-6 space-y-1">
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -156,7 +156,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -166,7 +166,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -176,7 +176,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -187,7 +187,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <strong className="font-semibold text-lg text-gray-900">
+                <strong className="font-semibold text-lg">
                   {" "}
                   Support{" "}
                 </strong>
@@ -195,7 +195,7 @@ const Footer = () => {
                 <ul className="mt-6 space-y-1">
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -205,7 +205,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -215,7 +215,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      className="text-gray-700 transition hover:text-gray-700/75"
+                      className=" transition "
                       to="/"
                     >
                       {" "}
@@ -228,15 +228,15 @@ const Footer = () => {
           </div>
 
           <div className="mt-16 border-t border-gray-100 pt-8">
-            <p className="text-center text-xs/relaxed text-gray-500">
-              © Company 2024. All rights reserved.
+            <p className="text-center text-xs/relaxed">
+              Developed with ❤ by
               <br />
               Created with &nbsp;
               <Link
                 to=""
-                className="text-gray-700 underline transition hover:text-gray-700/75"
+                className=" underline transition"
               >
-                React JS
+                Vishakha, Swadesh & Chaitanya
               </Link>
             </p>
           </div>
