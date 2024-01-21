@@ -8,7 +8,6 @@ const Infobanner = ()=>(
         <p className="text-white text-2xl">Jagaran/Shringar Aarti 6:30 AM</p>
         <p className="text-white text-2xl">Afternoon Aarti 12:00 PM</p>
         <p className="text-white text-2xl">Sandhya Aarti	7:30 PM</p>
-        <button className="bg-orange-500 text-white p-4 m-2 rounded-md text-sm">Know more...</button>
       </div>
      </div>
 

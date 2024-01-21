@@ -30,7 +30,7 @@ const Navbar = () => {
       <header className="flex max-w-9xl bg-orange-500 text-black font-serif shadow-lg justify-between items-center">
         <div className="w-20 h-22">
           <img
-            src="https://coreldrawdesign.com/resources/previews/preview-shree-ram-png-image-free-design-jai-shree-ram-free-vector-image-download-1699429588.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAqVsfXnzIqrjkKt9OWW2t0H67XVQab2gfvw&usqp=CAU"
             alt=""
           />
         </div>
