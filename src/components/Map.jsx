@@ -4,7 +4,7 @@ const Map = () => {
   return (
     <>
     <h1 className="font-bold  text-5xl m-4 p-6 text-orange-500 text-center">How to reach</h1>
-    <div className="relative">
+    <div className="relative mb-8">
     <iframe
     title="Google Maps"
     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15062.535391801499!2d72.8285481!3d19.2982828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b125e4567893%3A0x5c56af5bb630379d!2sRam%20mandir!5e0!3m2!1sen!2sin!4v1705683654349!5m2!1sen!2sin"
