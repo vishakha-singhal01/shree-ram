@@ -123,21 +123,20 @@ const Quiz = () => {
                 alt="Ram Bhakt"
                 className="rounded-md w-72 h-64"
               />
+              <div className="mx-5">
               <p className="mt-2 text-orange-500 text-sm font-semibold">Congratulations! You've earned a Badge!</p>
-              <p className="text-orange-500 text-sm mb-1 font-semibold">Take screenshot and share it on Social Media!</p>
-              <p className="text-orange-500 text-sm mb-1 font-semibold">Let's spread our culture with these #</p>
-              <button className="bg-black rounded-md p-2 shadow-sm text-white me-1 cursor-auto">jaishreeram</button>
-              <button className="bg-black rounded-md p-2 shadow-sm text-white me-1 cursor-auto">rambhakt</button>
-              <button className="bg-black rounded-md p-2 shadow-sm text-white cursor-auto">ramreward</button>
+              <p className="text-orange-500 text-sm mb-1 font-semibold">Let's spread your culture with these #</p>
+              </div>
+              <button className="bg-black rounded-md p-1 shadow-sm text-white me-1 ml-4 cursor-auto">jaishreeram</button>
+              <button className="bg-black rounded-md p-1 shadow-sm text-white me-1 cursor-auto">rambhakt</button>
+              <button className="bg-black rounded-md p-1 shadow-sm text-white cursor-auto">ramreward</button>
               
-              {/* <div className="text-sm ">
-              <p>Play Quiz & Win Reward</p>
-              <p></p>
-              </div> */}
-              <Link to="https://ayodhya.netlify.app" target="" className="text-orange-400 hover:text-blue-500">https://ayodhya.netlify.app</Link>
-              <br/>
+              <div className="text-sm">
+              <p className="mt-1 mx-16 font-bold">Play Quiz & Win Reward</p>
+              <p className="mx-8 font-semibold"><Link to="https://heart-of-hanuman.netlify.app" target="" className="text-orange-400 hover:text-blue-500">https://heart-of-hanuman.netlify.app</Link></p>
+              </div>
 
-              <button onClick={closeModal} className="relative bg-orange-500 mt-1 text-white w-16 h-8 p-2 text-center rounded-md text-sm">
+              <button onClick={closeModal} className="relative bg-orange-500 mt-1 mx-24 text-white w-16 h-8 p-1 text-center rounded-md text-sm">
                 Close
               </button>
             </div>

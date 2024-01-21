@@ -156,7 +156,7 @@ const CommunityForm = () => {
         </div>
         <button
           type="submit"
-          className="bg-orange-500 text-white p-4 rounded-md text-sm"
+          className="bg-orange-500 text-white p-3 rounded-md text-base"
         >
           Submit
         </button>
