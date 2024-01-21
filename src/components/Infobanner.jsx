@@ -20,7 +20,7 @@ const Infobanner = () => (
     <section className="w-full h-[90vh] flex justify-center items-center">
       <img
         src={Aarti}
-        className="absolute z-[-1] w-full h-[90vh] object-cover"
+        className="absolute z-[-1] w-full h-full object-cover data-te-lazy-load-init data-te-lazy-src"
       />
       <div className="text-center bg-black bg-opacity-60">
         <div className="p-16">
