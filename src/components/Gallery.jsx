@@ -1,4 +1,5 @@
 import OmImage from "../../public/images/OmSymbol.svg";
+import { motion } from "framer-motion";
 
 const GalleryDataCollection = [
   {
@@ -56,13 +57,19 @@ const Gallery = () => (
         {GalleryDataCollection.map((gallery) => {
           const { imageUrl, title } = gallery;
           return (
-            <div className="z-[3] w-80 h-64 shadow-lg bg-white m-3 p-3 hover:scale-125 transition duration-500 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="z-[3] w-80 h-64 shadow-lg bg-white m-3 p-3 hover:scale-125 transition duration-500 mx-auto"
+            >
               <img
                 className="rounded h-48 w-80 object-cover object-center"
                 src={imageUrl}
               />
               <h1 className="mt-3 font-bold text-center text-2xl">{title}</h1>
-            </div>
+            </motion.div>
           );
         })}
       </div>

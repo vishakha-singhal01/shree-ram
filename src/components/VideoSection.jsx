@@ -1,10 +1,18 @@
+import { motion } from "framer-motion";
+
 const VideoSection = () => {
   return (
     <div className="py-20">
       <h1 className="font-bold text-5xl mb-10 text-orange-500 text-center">
         History Of Ram Mandir
       </h1>
-      <div className="container mx-auto p-4 flex flex-col lg:flex-row mb-12">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="container mx-auto p-4 flex flex-col lg:flex-row mb-12"
+      >
         {/* Image */}
         <div className="lg:w-1/2">
           <div className="m-auto p-auto">
@@ -21,7 +29,13 @@ const VideoSection = () => {
         </div>
 
         {/* Text content */}
-        <div className="lg:w-1/2 lg:pl-6">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="lg:w-1/2 lg:pl-6"
+        >
           <p className="text-justify text-base md:text-xl px-3 mt-1">
             The Ram Mandir in Ayodhya, India, is a cultural milestone and
             architectural marvel, honoring Lord Rama at his birthplace. Stemming
@@ -38,8 +52,8 @@ const VideoSection = () => {
             just as a temple but as a testament to India's ability to resolve
             cultural and religious disputes.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
