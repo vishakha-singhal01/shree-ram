@@ -9,7 +9,7 @@ const Map = () => {
       <div className="relative mb-8">
         <iframe
           title="Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15062.535391801499!2d72.8285481!3d19.2982828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b125e4567893%3A0x5c56af5bb630379d!2sRam%20mandir!5e0!3m2!1sen!2sin!4v1705683654349!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56985.22256035257!2d82.1579681171043!3d26.789769240217108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07937e6d2823%3A0x5fc8f683b17f222b!2sAyodhya%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1705850809358!5m2!1sen!2sin"
           width="100%"
           height="600"
           style={{ border: "0" }}
