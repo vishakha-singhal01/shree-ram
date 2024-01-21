@@ -30,7 +30,7 @@ const ImageSlider = () => {
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform ${
+            className={`absolute top-0 left-0 w-full h-full object-contain transition-transform duration-500 ease-in-out transform ${
               index === currentSlide
                 ? "opacity-100 scale-100"
                 : "opacity-0 scale-100"
