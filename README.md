@@ -26,10 +26,10 @@
 
 ## How to run 
 1) Download the Zip folder of the provided "schedule_appointment" repository.
-2) 2) Open VS Code & then open terminal (ctrl+shift+`)
+2) Open VS Code & then open terminal (ctrl+shift+`)
 3) run "npm i" (It will install all the necessary packages that are mentioned in the package.json
 4) run "npm start" or "npm run start" (To start the website)
-5)The website will be live at localhost, just copy the URL and run it on the browser.
+5) The website will be live at localhost, just copy the URL and run it on the browser.
 6) Congrats, you will be able to use the website's functionalities on localhost.
 
 If you want to join us, reach out to us. Happy Coding. 
